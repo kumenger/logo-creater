@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/kumenger/logo-creater/issues"
   },
-  "homepage": "https://github.com/kumenger/logo-creater#readme"
+  "homepage": "https://github.com/kumenger/logo-creater#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
