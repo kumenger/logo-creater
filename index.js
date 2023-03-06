@@ -24,20 +24,54 @@ const questions = [
     message: "Select a Shape for logo?",
     name: "shape",
     type: "list",
-    choices: ["Circle", "Ellipse", "Trinagle", "Rectangle"],
+    choices: ["circle", "ellipse", "polygon", "rect"],
   },
 ];
 
 function createLogo(fileName, data) {
   let newShape = data.shape;
-  let newLogo = new createLog.Trinagle(
-    data.text,
-    data.ShapeColor,
-    data.textColor,
-    data.shape
-  );
-  newlogoCreated = newLogo.render();
-  console.log(newlogoCreated);
+  let newlogoCreated;
+  switch(newShape){
+    case "circle":
+      let newCircle = new createLog.Circle(
+        data.text,
+        data.ShapeColor,
+        data.textColor,
+        data.shape
+      );
+      newlogoCreated = newCircle.render();
+     break;
+      case "ellipse":
+        let newElipse = new createLog.Ellipse(
+          data.text,
+          data.ShapeColor,
+          data.textColor,
+          data.shape
+        );
+        newlogoCreated = newElipse.render();
+        break;
+        case "polygon":
+          let newTrinagle = new createLog.Trinagle(
+            data.text,
+            data.ShapeColor,
+            data.textColor,
+            data.shape
+          );
+          newlogoCreated = newTrinagle.render();
+          break;
+          case "rect":
+            let newRec=new createLog.Reactangle(
+              data.text,
+              data.ShapeColor,
+              data.textColor,
+              data.shape
+            )
+            newlogoCreated=newRec.render()
+            break;
+  }
+
+ 
+ 
 
   fs.writeFile(fileName, newlogoCreated, (err, res) => {
     if (err) {
