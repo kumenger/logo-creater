@@ -11,7 +11,7 @@ const textLengValidate=(input)=>{
 const questions = [
   {
     type: "input",
-    message: "What text for logo to use?",
+    message: "What text for logo to use?(must not be there characters long)",
     name: "text",
     validate:textLengValidate
   },
@@ -86,9 +86,8 @@ function createLogo(fileName, data) {
   });
 }
 
-function init() {
-  inquirer
-    .prompt(questions)
-    .then((dataHere) => createLogo("./dist/logo.svg", dataHere));
+const answers= async()=>{
+  let result= await inquirer.prompt(questions)
+  createLogo("./dist/logo.svg",result)
 }
-init();
+answers()
