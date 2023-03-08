@@ -77,8 +77,6 @@ function createLogo(fileName, data) {
             newlogoCreated=newRec.render()
             break;
   }
-
- 
  
 
   fs.writeFile(fileName, newlogoCreated, (err, res) => {
