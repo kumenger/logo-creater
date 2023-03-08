@@ -1,16 +1,23 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const createLog = require("./lib/generateSvg");
-const { Console } = require("console");
+const textLengValidate=(input)=>{
+  if(input.length>3){
+    return 'text can not be greter that there characters please try again!!'
+  }
+  return true
+}
+
 const questions = [
   {
     type: "input",
-    message: "What text for logo?",
+    message: "What text for logo to use?",
     name: "text",
+    validate:textLengValidate
   },
   {
     type: "input",
-    message: "COlor to fill the shape",
+    message: "Color to fill the shape",
     name: "ShapeColor",
   },
   {
@@ -24,15 +31,16 @@ const questions = [
     message: "Select a Shape for logo?",
     name: "shape",
     type: "list",
-    choices: ["circle", "ellipse", "polygon", "rect"],
+    choices: ["Circle", "Ellipse", "Triangle", "Rectangle"],
   },
 ];
+
 
 function createLogo(fileName, data) {
   let newShape = data.shape;
   let newlogoCreated;
   switch(newShape){
-    case "circle":
+    case "Circle":
       let newCircle = new createLog.Circle(
         data.text,
         data.ShapeColor,
@@ -41,7 +49,7 @@ function createLogo(fileName, data) {
       );
       newlogoCreated = newCircle.render();
      break;
-      case "ellipse":
+      case "Ellipse":
         let newElipse = new createLog.Ellipse(
           data.text,
           data.ShapeColor,
@@ -50,7 +58,7 @@ function createLogo(fileName, data) {
         );
         newlogoCreated = newElipse.render();
         break;
-        case "polygon":
+        case "Triangle":
           let newTrinagle = new createLog.Trinagle(
             data.text,
             data.ShapeColor,
@@ -59,7 +67,7 @@ function createLogo(fileName, data) {
           );
           newlogoCreated = newTrinagle.render();
           break;
-          case "rect":
+          case "Rectangle":
             let newRec=new createLog.Reactangle(
               data.text,
               data.ShapeColor,
