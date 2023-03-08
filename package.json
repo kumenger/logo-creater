@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "start":"node index.js"
   },
   "repository": {
     "type": "git",
