@@ -7,6 +7,7 @@
  ### [Questions](https://github.com/kumenger/logo-creater#questions)
  ### [Usage](https://github.com/kumenger/logo-creater#usage)
  ### [License](https://github.com/kumenger/logo-creater#license)
+ ### [Test](https://github.com/kumenger/logo-creater#test)
   ## Installation
  ### N/A
  ## Test
