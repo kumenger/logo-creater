@@ -6,25 +6,33 @@ describe("Create Logo", () => {
 
   describe("Create tringle Shape logo", () => {
     test("should return logo  tringle ", () => {
+      //create new trinagle class with hardcoded values
      let newLogo = new CreateLogo.Trinagle("kumeTrinagle", "red", "red", "circle");
+     //render method renders a string to  test  using toMatch method hardcodes values  matched in returend string 
      expect(newLogo.render()).toMatch(/kumeTrinagle/);
     });
   });
   describe("Create Circle Shape logo", () => {
     test("should return logo  Circle ", () => {
-     let newLogo = new CreateLogo.Trinagle("kumeCircle", "red", "red", "circle");
+      //create new circle class with hardcoded values
+     let newLogo = new CreateLogo.Circle("kumeCircle", "red", "red", "circle");
+     //render method renders a string to  test  using toMatch method hardcodes values  matched in returend string 
      expect(newLogo.render()).toMatch(/kumeCircle/);
     });
   });
   describe("Create Ellipise Shape logo", () => {
     test("should return logo  Ellipise ", () => {
-     let newLogo = new CreateLogo.Trinagle("kumeEllipise", "red", "red", "circle");
+      //create new Ellipise class with hardcoded values
+     let newLogo = new CreateLogo.Ellipse("kumeEllipise", "red", "red", "circle");
+     //render method renders a string to  test  using toMatch method hardcodes values  matched in returend string 
      expect(newLogo.render()).toMatch(/kumeEllipise/);
     });
   });
   describe("Create Rectangle Shape logo", () => {
     test("should return logo  Rectangle ", () => {
-     let newLogo = new CreateLogo.Trinagle("kumeReactangle", "red", "red", "circle");
+      //create new rectangle class with hardcoded values
+     let newLogo = new CreateLogo.Reactangle("kumeReactangle", "red", "red", "circle");
+     //render method renders a string to  test  using toMatch method hardcodes values  matched in returend string 
      expect(newLogo.render()).toMatch(/kumeReactangle/);
     });
   });

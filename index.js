@@ -1,19 +1,20 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const createLog = require("./lib/generateSvg");
+//validate if text length is not more than three and giving this function to validate property
 const textLengValidate=(input)=>{
   if(input.length>3){
     return 'text can not be greter that there characters please try again!!'
   }
   return true
 }
-
+// user selcte shape color for ceating logo
 const questions = [
   {
     type: "input",
     message: "What text for logo to use?(must not be there characters long)",
     name: "text",
-    validate:textLengValidate
+   validate:textLengValidate
   },
   {
     type: "input",
@@ -35,7 +36,7 @@ const questions = [
   },
 ];
 
-
+//this func calls createlogo calss by switching shape cases and and calling render method in the class
 function createLogo(fileName, data) {
   let newShape = data.shape;
   let newlogoCreated;
@@ -78,14 +79,14 @@ function createLogo(fileName, data) {
             break;
   }
  
-
+//based on switch result create a file 
   fs.writeFile(fileName, newlogoCreated, (err, res) => {
     if (err) {
       console.log("error", err);
     }
   });
 }
-
+//calling the method by giving directory and file type(.svg)
 const answers= async()=>{
   let result= await inquirer.prompt(questions)
   createLogo("./dist/logo.svg",result)
