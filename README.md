@@ -13,7 +13,7 @@
  ## Test
  ### Jest is used to test the application
    ## Usage
- ### npm start in terminal and answering questions about logo 
+ ### npm start in terminal 
   ## Questions
    #### Github Profile:https://github.com/kumenger
    #### Contact Me:kumeprog@gmail.com
