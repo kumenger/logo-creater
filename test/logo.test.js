@@ -9,7 +9,7 @@ describe("Create Logo", () => {
       //create new trinagle class with hardcoded values
      let newLogo = new CreateLogo.Trinagle("kumeTrinagle", "red", "red", "circle");
      //render method renders a string to  test  using toMatch method hardcodes values  matched in returend string 
-     expect(newLogo.render()).toMatch(/kumeTrinagle/);
+     expect(newLogo.render()).toMatch(/kumeTrinaglexxx/);
     });
   });
   describe("Create Circle Shape logo", () => {
@@ -17,7 +17,7 @@ describe("Create Logo", () => {
       //create new circle class with hardcoded values
      let newLogo = new CreateLogo.Circle("kumeCircle", "red", "red", "circle");
      //render method renders a string to  test  using toMatch method hardcodes values  matched in returend string 
-     expect(newLogo.render()).toMatch(/kumeCircle/);
+     expect(newLogo.render()).toMatch(/kumeCirclexxx/);
     });
   });
   describe("Create Ellipise Shape logo", () => {

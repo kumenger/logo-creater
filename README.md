@@ -10,7 +10,13 @@
  ### [Test](https://github.com/kumenger/logo-creater#test)
   ## Installation
  ### N/A
- ## Test
+ ## Link to Full Video
+[Link to view Full Video of Application](https://drive.google.com/file/d/1sx5FW1GkS3tMAtoKDTq4plNOO57datc4/view)
+
+
+
+
+ ## Testc
  ### Jest is used to test the application
    ## Usage
  ### npm start in terminal 
