@@ -1,10 +1,4 @@
-
-  <svg width="30" height="30" version="1.1" xmlns="http://www.w3.org/2000/svg" >
- 
-
-       
-        <rect x="10" y="10" width="50" height="50"   fill="black" stroke-width="1"/>
-        <text text-anchor="middle"  font-size="5px"  x="20" y="20" fill="red">kum</text>
-      </svg>
-  
-  
+<svg width="00" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="250,60 100,400 400,400" width="60" height="60" stroke="black" fill="black" stroke-width="1"/>
+            <text text-anchor="middle"  font-size="15px"  x="250" y="150" fill="red">KUM</text>
+            </svg>
